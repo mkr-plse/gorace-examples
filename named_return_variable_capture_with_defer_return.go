@@ -1,31 +1,30 @@
 package main
 
-func Foo()(string, error) {
-   return "",nil
+func foo() (string, error) {
+	return "", nil
 }
 
-func Bar()(string, error) {
-   return "",nil
+func bar() (string, error) {
+	return "", nil
 }
 
-func Baz(x string, val bool)(string, error) {
-   return "",nil
+func baz(x string, val bool) (string, error) {
+	return "", nil
 }
 
+func redeem() (resp string, err error) {
+	defer func() {
+		resp, err = foo()
+	}()
+	_, err = bar()
+	// err check but no return
 
-func Redeem() (resp string, err error) {
- defer func () {
-   resp,err = Foo()
- }()
- _,err = Bar()
- // err check but no return
-
- go func () {
-   Baz("abcdef", err != nil )
- }()
- return // the defer function runs after here
+	go func() {
+		baz("abcdef", err != nil)
+	}()
+	return // the defer function runs after here
 }
 
 func main() {
-  _,_ = Redeem()
+	_, _ = redeem()
 }

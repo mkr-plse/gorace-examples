@@ -1,33 +1,32 @@
 package main
 
-func Foo()(string, error) {
-   return "",nil
+func foo() (string, error) {
+	return "", nil
 }
 
-func Bar()(string, error) {
-   return "",nil
+func bar() (string, error) {
+	return "", nil
 }
 
-func Baz()(string, error) {
-   return "",nil
+func baz() (string, error) {
+	return "", nil
 }
-
 
 func main() {
-  _,err := Foo()
-  if err != nil {
-    // do something
-  }
+	_, err := foo()
+	if err != nil {
+		// do something
+	}
 
-  go func () {
-    _,err = Bar()
-    if err != nil {
-     // do something
-    }
-  }()
+	go func() {
+		_, err = bar()
+		if err != nil {
+			// do something
+		}
+	}()
 
-  _,err = Baz()
-  if err != nil {
-    // do something
-  }
+	_, err = baz()
+	if err != nil {
+		// do something
+	}
 }
