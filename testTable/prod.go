@@ -1,4 +1,4 @@
-package paralleTestDemo
+package testTable
 
 type Product struct {
 	field int

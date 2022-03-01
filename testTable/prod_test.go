@@ -1,4 +1,4 @@
-package paralleTestDemo
+package testTable
 
 import (
 	"testing"
