@@ -58,7 +58,7 @@ go run -race incorrectGroupAdd.go 2>&1 | tee -a incorrectGroupAdd.log | grep -q 
 
 #listing 10+
 echo "----------------"
-echo "Demo of races due to incorrect placement of WaitGroup.Done() (not shown but mentioned)"
+echo "Demo of races due to incorrect placement of WaitGroup.Done() (not a listing but mentioned)"
 echo "----------------"
 go run -race incorrectGroupDone.go 2>&1 | tee -a incorrectGroupDone.log | grep -q "DATA RACE" && echo "PASS"
 
@@ -72,7 +72,7 @@ go run -race rlock.go 2>&1 | tee -a rlock.log | grep -q "DATA RACE" && echo "PAS
 
 #listing NA
 echo "----------------"
-echo "Demo of races due to running parallel tests in test suite/table"
+echo "Demo of races due to running parallel tests in test suite/table (not a listing but mentioned)"
 echo "----------------"
 cd testTable
 go test -race . 2>&1 | tee -a parallelTest.log | grep -q "DATA RACE" && echo "PASS"

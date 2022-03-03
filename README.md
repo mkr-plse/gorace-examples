@@ -13,7 +13,7 @@ B. Without using a docker.
 Follow these steps.
 1. `git clone https://github.com/mkr-plse/gorace-examples.git`
 2. `cd gorace-examples`
-3. `docker build -t golang_datarace_artifact`
+3. `docker build -t golang_datarace_artifact .`
 4. `docker run -it golang_datarace_artifact /bin/bash`
 5. `bash run.sh` # this will run each data race example.
 6. [Optional] You may investigate the *.log files present which show the found data race logs.
