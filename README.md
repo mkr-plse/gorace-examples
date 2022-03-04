@@ -53,7 +53,7 @@ The artifact includes the sample data race examples corresponding to the pattern
 
 #### A list of claims from the paper not supported by the artifact, and how/why.
 
-We do not claim to reproduce how frequenly these patterns occur because doing so requires releasing a 50 million lines of properotory business-critical code. We also don't claim to reproduce the concurrency aming different languages that we observed and showed in Table-1 and Figure 1. We also don't release the automation used for bug filing, which is internal to the company.
+We do not claim to reproduce how frequently these patterns occur because doing so requires releasing a 50 million lines of proprietary business-critical code. We also don't claim to reproduce the concurrency aiming different languages that we observed and showed in Table-1 and Figure 1. We also don't release the automation used for bug filing, which is internal to the company.
 
 ## Details of the artifact
 The data race examples are associated with a Listing numbers used in the paper. A few additional data race examples are also included, which are mentioned but not shown as listings in the paper.
