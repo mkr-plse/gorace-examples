@@ -88,6 +88,10 @@ There are 12 data race patterns one each in `.go` file.
 
 `run.sh` will run all these examples in one go. After running the `run.sh` script, for each `.go` file, a corresponding `.log` file will be generated, which captures the data race found by the tool. 
 
+You may run an individual test with the command: `go run -race <go file>`.
+
+The test table example is different and requires `cd` into `testTable` directory and running `go test -race .`
+
 You may investigate the `*.log` files which show the  data race in each example. Each log file contains two the call stacks where the data race is found. There will also be parent call stack of the goroutines if present.
 You can open up the corresponding `.go` file to see the source code of the data race.
 

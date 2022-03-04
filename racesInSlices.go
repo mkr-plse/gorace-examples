@@ -1,6 +1,9 @@
 package main
 
-import "sync"
+import (
+	"strconv"
+	"sync"
+)
 
 func processOne(x string) string {
 	return x
@@ -29,6 +32,10 @@ func processAll(uuids []string) int {
 }
 
 func main() {
-	uuids := [2]string{"abcd", "efgh"}
+	var uuids []string
+	// Create 1000 uuids
+	for i := 0; i < 1000; i++ {
+		uuids = append(uuids, strconv.FormatInt(int64(i), 10))
+	}
 	_ = processAll(uuids[:])
 }
