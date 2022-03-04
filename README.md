@@ -135,8 +135,8 @@ The shared variable `job` is at address `0x00c0000a2000`.
 The first call stack shows the concurrent read from this variable on line `11`. The second call stack shows the concurrent write to this variable on line `9`.  
 The call stack staring with `Goroutine 6 (running) created at:` is the parent of the concurrent reader, which was created in the main goroutine at line `10`. The writer goroutine does not have a parent since it is in `main`.
 
-The data race here is due to the concurrent modification of `job` on line `9` as it is being read concurrently on line `11` due to the *transparent capture of the variable* by the gorouting.
+The data race here is due to the concurrent modification of `job` on line `9` as it is being read concurrently on line `11` due to the *transparent capture of the variable* by the goroutine.
 
-You may investigate `run.bash` file to add more data race examples to easily extend the script.
+You may investigate `run.sh` file to add more data race examples to easily extend the script.
 
 
