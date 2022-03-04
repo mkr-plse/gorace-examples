@@ -48,7 +48,7 @@ Follow these steps.
 # Step-by-Step Instructions 
 #### A list of claims from the paper supported by the artifact, and how/why.
 
-We propose to evaluate the data race patterns showsn in the Section 4 (Observations of Data Races in Go) of the paper.
+We propose to evaluate the data race patterns shown in the Section 4 (Observations of Data Races in Go) of the paper.
 The artifact includes the sample data race examples corresponding to the patterns presented in the paper. The artifact will show that when run with the data race tool (`-race` flag) these races are detected. The evaluators are encouraged to peruse the examples to convince that go language and data race have a complex interplay (more so compared with other languages). 
 
 #### A list of claims from the paper not supported by the artifact, and how/why.
