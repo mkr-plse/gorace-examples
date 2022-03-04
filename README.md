@@ -6,7 +6,9 @@ The artifact includes the sample data race examples shown in Section 4 "Observat
 The data race examples are associated with a Listing number used in the paper. A few additional data race examples are also included, which are mentioned but not shown as a listing in the paper.
 
 You can exercise the artifact in one of the following ways:
+
 A. Using a docker
+
 B. Without using a docker.
 
 # A. Using the docker
