@@ -12,7 +12,7 @@ B. Without using a docker.
 # A. Using the docker
 1. Download the artifact from zenodo URL.
 
-   `wget TBD`
+   `curl -o gorace-examples.tgz https://zenodo.org/record/6329600/files/gorace-examples.tgz`
 2. Uncompress the file.
   
    `tar zxf gorace-examples.tgz`
@@ -35,7 +35,7 @@ Follow these steps.
 1. Install Go `go1.15.5` matching you distribution from here: https://go.dev/dl/
 2. Download the artifact from zenodo URL.
   
-   `wget TBD`
+   `curl -o gorace-examples.tgz https://zenodo.org/record/6329600/files/gorace-examples.tgz`
 3. Uncompress the file.
   
    `tar zxf gorace-examples.tgz`
