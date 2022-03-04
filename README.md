@@ -1,5 +1,5 @@
 
-This is at the artifact accompanying the PLDI'22 paper titled "A Study of Real-world Data Races in Golang."
+This is the artifact accompanying the PLDI'22 paper titled "A Study of Real-world Data Races in Golang."
 
 #  Getting Started Guide
 
