@@ -12,7 +12,7 @@ B. Without using a docker.
 # A. Using the docker
 1. Download the artifact from zenodo URL.
 
-   `curl -o gorace-examples.tgz https://zenodo.org/record/6329600/files/gorace-examples.tgz`
+   `curl -o gorace-examples.tgz https://zenodo.org/record/6330164/files/gorace-examples.tgz`
 2. Uncompress the file.
   
    `tar zxf gorace-examples.tgz`
@@ -35,7 +35,7 @@ Follow these steps.
 1. Install Go `go1.15.5` matching you distribution from here: https://go.dev/dl/
 2. Download the artifact from zenodo URL.
   
-   `curl -o gorace-examples.tgz https://zenodo.org/record/6329600/files/gorace-examples.tgz`
+   `curl -o gorace-examples.tgz https://zenodo.org/record/6330164/files/gorace-examples.tgz`
 3. Uncompress the file.
   
    `tar zxf gorace-examples.tgz`
@@ -53,7 +53,7 @@ The artifact includes the sample data race examples corresponding to the pattern
 
 #### A list of claims from the paper not supported by the artifact, and how/why.
 
-We do not claim to reproduce how frequently these patterns occur because doing so requires releasing a 50 million lines of proprietary business-critical code. We also don't claim to reproduce the concurrency aiming different languages that we observed and showed in Table-1 and Figure 1. We also don't release the automation used for bug filing, which is internal to the company.
+We do not claim to reproduce how frequently these patterns occur because doing so requires releasing a 50 million lines of proprietary business-critical code. We don't claim to reproduce the concurrency comparison between different languages that we showed in Table-1 and Figure 1. We also don't release the automation used for bug filing, which is internal to the company.
 
 ## Details of the artifact
 The data race examples are associated with a Listing numbers used in the paper. A few additional data race examples are also included, which are mentioned but not shown as listings in the paper.
@@ -77,7 +77,7 @@ There are 12 data race patterns one each in `.go` file.
 
 8. Listing 9 from the paper is present in `mixingMessagePassingWithSharedmem.go`. This example shows the data race due to mixing message passing with shared memory.
 
-9. Listing 10 from the paper is present in `incorrectGroupAdd.go`. This example shows the data race due to incorrect placement of WaitGroup.Add().
+9. Listing 10 from the paper is present in `incorrectGroupAdd.go`. This example shows the data race due to the incorrect placement of WaitGroup.Add().
 
 10. `incorrectGroupDone.go` shows the data race due to incorrect placement of WaitGroup.Done(). This example is mentioned in the paper but there is no listing in the paper.
 
@@ -92,7 +92,7 @@ You may run an individual test with the command: `go run -race <go file>`.
 
 The test table example is different and requires `cd` into `testTable` directory and running `go test -race .`
 
-You may investigate the `*.log` files which show the  data race in each example. Each log file contains two the call stacks where the data race is found. There will also be parent call stack of the goroutines if present.
+You may investigate the `*.log` files, which show the  data race in each example. Each log file contains two the call stacks where the data race is found. There will also be parent call stack(s) of the goroutine(s) if present.
 You can open up the corresponding `.go` file to see the source code of the data race.
 
 As an example, `loopIndexVariableCapture.log` might look like this.
