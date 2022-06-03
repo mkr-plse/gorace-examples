@@ -73,7 +73,14 @@ go run -race rlock.go 2>&1 | tee rlock.log | grep -s "DATA RACE" && echo "PASS"
 echo "----------------"
 echo "Demo of races due to mxing method invocation on value vs. pointer receivers."
 echo "----------------"
-go run -race mixingByValwithByPtr.go 2>&1 | tee rlock.log | grep -s "DATA RACE" && echo "PASS"
+go run -race mixingByValwithByPtr.go 2>&1 | tee mixingByValwithByPtr.log | grep -s "DATA RACE" && echo "PASS"
+
+#New patterns not in the paper
+echo "----------------"
+echo "Demo of races due to double defer with incorrect order."
+echo "----------------"
+go run -race doubleDeferWaitGrp.go 2>&1 | tee doubleDeferWaitGrp.log | grep -s "DATA RACE" && echo "PASS"
+
 
 
 
