@@ -69,6 +69,13 @@ echo "Demo of races due to mutating shared variable in a reader lock held in rea
 echo "----------------"
 go run -race rlock.go 2>&1 | tee rlock.log | grep -s "DATA RACE" && echo "PASS"
 
+#New patterns not in the paper
+echo "----------------"
+echo "Demo of races due to mxing method invocation on value vs. pointer receivers."
+echo "----------------"
+go run -race mixingByValwithByPtr.go 2>&1 | tee rlock.log | grep -s "DATA RACE" && echo "PASS"
+
+
 
 #listing NA
 echo "----------------"
